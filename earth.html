@@ -90,16 +90,16 @@
         lat = degToRad(lat);
         long = degToRad(long);
         var coord = {}
-        coord.x = Math.sin(lat) * Math.cos(long) * 1;
-        coord.z = Math.sin(lat) * Math.sin(long) * 1;
-        coord.y = Math.cos(lat) * 1;
+        coord.x = -Math.cos(lat) * Math.cos(long) * 1;
+        coord.z = Math.cos(lat) * Math.sin(long) * 1;
+        coord.y = Math.sin(lat) * 1;
         return coord;
       }
         
         var controlPoints = [];
-        controlPoints[0] = latLongToCartesian(45, -75.4);
-        controlPoints[1] = {x: 1, y: 1.5, z: 0};
-        controlPoints[2] = latLongToCartesian(50, 55);
+        controlPoints[0] = latLongToCartesian(51, 0.7);
+        controlPoints[1] = {x: -0.8, y: 1, z: -1 };
+        controlPoints[2] = latLongToCartesian(45, -74);
         
         var oldX = 0;
         var oldY = 0;
